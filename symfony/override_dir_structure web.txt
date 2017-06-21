@@ -1,0 +1,1 @@
+http://symfony.com/doc/current/configuration/override_dir_structure.html#override-web-dir

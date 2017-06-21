@@ -1,0 +1,6 @@
+<Files a.php>
+AuthUserFile C:/xampp2/htdocs/test/.htpasswd
+AuthName "Accès protégé"
+AuthType Basic
+Require valid-user
+</Files>

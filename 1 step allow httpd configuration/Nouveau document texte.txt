@@ -1,0 +1,4 @@
+Change the line that says: 
+AllowOverride None 
+to instead say: 
+AllowOverride AuthConfig

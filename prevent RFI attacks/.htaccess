@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{QUERY_STRING} (.*)(http|https|ftp)://(.*)
+RewriteRule ^(.+)$ - [F,L]
+The RewriteCond will match the found pattern, and the RewriteRule determines where to redirect the attacker. Here, the F and L options will block the request.

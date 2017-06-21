@@ -1,0 +1,7 @@
+ridez votre PHP
+
+L’une des hantises des développeurs PHP, c’est de laissez une porte ouverte dans leurs développements. Un formulaire mal codé et hop, c’est le festival des pirates ! Si jamais quelqu’un arrive à injecter une iframe ou un bien même un bout de code PHP dans votre site, il peut très vite faire en forte d’être chez lui.
+En PHP, il existe entre autre la méthode exec() qui permet de lancer des commandes comme vous le feriez dans votre console SSH. Cette commande doit être absolument désactivée. Dans les versions récentes de PHP, celle-ci est désactivée par défaut. Pour vérifier que c’est bien le cas, vous pouvez le vérifier en affichant les informations via un classique <?php phpinfo(); ?>. Si ce n’est le cas, éditez le fichier php.ini, trouvez la ligne disable_functions et complétez-la de la façon suivante :
+```php
+disable_functions = exec, passthru, shell_exec, system, proc_open, popen, curl_exec, curl_multi_exec, parse_ini_file, show_source
+```
